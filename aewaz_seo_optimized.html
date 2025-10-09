@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Aewaz - Web Development & SaaS Solutions | Custom Software Services Mumbai</title>
+    <meta name="title" content="Aewaz - Web Development & SaaS Solutions | Custom Software Services Mumbai">
+    <meta name="description" content="Aewaz delivers premium web development, SaaS products, and software support services in Mumbai, India. Transform your business with custom digital solutions from expert developers.">
+    <meta name="keywords" content="web development Mumbai, SaaS solutions India, custom software development, web design, software support, Aewaz, Mumbai web development, React development, Node.js services">
+    <meta name="author" content="Aewaz">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aewaz.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aewaz.com/">
+    <meta property="og:title" content="Aewaz - Web Development & SaaS Solutions">
+    <meta property="og:description" content="Premium web development and SaaS solutions for modern businesses. Custom software services tailored to your needs.">
+    <meta property="og:image" content="https://aewaz.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aewaz.com/">
+    <meta property="twitter:title" content="Aewaz - Web Development & SaaS Solutions">
+    <meta property="twitter:description" content="Premium web development and SaaS solutions for modern businesses.">
+    <meta property="twitter:image" content="https://aewaz.com/images/twitter-image.jpg">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Aewaz",
+      "alternateName": "Aewaz Solutions",
+      "url": "https://aewaz.com",
+      "logo": "https://aewaz.com/images/logo.png",
+      "description": "Professional web development and SaaS solutions provider specializing in custom software services",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mumbai",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Sales",
+        "email": "hello@aewaz.com",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "sameAs": [
+        "https://linkedin.com/company/aewaz",
+        "https://twitter.com/aewaz"
+      ]
+    }
+    </script>
+    
+    <!-- Service Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Web Development",
+      "provider": {
+        "@type": "Organization",
+        "name": "Aewaz"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web Development Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Web Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "SaaS Product Development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Software Support & Maintenance"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #2d3748;
+        }
+        
+        .section-description {
+            text-align: center;
+            color: #718096;
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+        
+        /* Features */
+        .features {
+            background: #f7fafc;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Process */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: #f7fafc;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: #4a5568;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .testimonial-role {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section a {
+            color: #cbd5e0;
+            text-decoration: none;
+            line-height: 2;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #4a5568;
+            color: #cbd5e0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .hero {
+                padding: 4rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/" class="logo" aria-label="Aewaz Home">Aewaz</a>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Business with Custom Digital Solutions</h1>
+            <p>Aewaz specializes in web development, SaaS products, and comprehensive software support services. We build scalable digital solutions that drive growth and innovation.</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get Started Today</a>
+                <a href="#services" class="btn btn-secondary">View Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p class="section-description">Comprehensive digital solutions tailored to your business needs. From concept to deployment, Aewaz delivers excellence at every step.</p>
+        
+        <div class="services-grid">
+            <article class="service-card">
+                <div class="service-icon">🚀</div>
+                <h3>Custom Web Development</h3>
+                <p>Responsive, fast, and SEO-optimized websites built with modern frameworks like React, Next.js, and Node.js. We create web experiences that engage users and drive conversions.</p>
+            </article>
+            
+            <article class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>SaaS Product Development</h3>
+                <p>End-to-end SaaS solutions from concept to launch. We handle architecture, development, deployment, and scaling to help you build the next big thing.</p>
+            </article>
+            
+            <article class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Software Support & Maintenance</h3>
+                <p>24/7 technical support, system monitoring, bug fixes, and performance optimization. Keep your applications running smoothly with our dedicated support team.</p>
+            </article>
+            
+            <article class="service-card">
+                <div class="service-icon">🛒</div>
+                <h3>E-commerce Solutions</h3>
+                <p>Powerful online stores that convert visitors into customers. We build secure, scalable e-commerce platforms with seamless payment integration and inventory management.</p>
+            </article>
+            
+            <article class="service-card">
+                <div class="service-icon">🔌</div>
+                <h3>API Development & Integration</h3>
+                <p>Custom RESTful and GraphQL APIs, third-party integrations, and microservices architecture. Connect your systems seamlessly for enhanced functionality.</p>
+            </article>
+            
+            <article class="service-card">
+                <div class="service-icon">☁️</div>
+                <h3>Cloud Solutions</h3>
+                <p>Scalable cloud infrastructure on AWS, Google Cloud, and Azure. We handle deployment, DevOps, CI/CD pipelines, and cloud migration for optimal performance.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features">
+        <h2>Why Choose Aewaz</h2>
+        <p class="section-description">We combine technical expertise with creative problem-solving to deliver solutions that exceed expectations.</p>
+        
+        <div class="features-grid">
+            <div class="feature-item">
+                <h3>⚡ Fast Delivery</h3>
+                <p>Agile development methodology ensures quick turnaround without compromising quality.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h3>💎 Quality Code</h3>
+                <p>Clean, maintainable, and well-documented code following industry best practices.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h3>🎯 Result-Driven</h3>
+                <p>Focused on delivering measurable business outcomes and ROI for your investment.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h3>🤝 Dedicated Support</h3>
+                <p>Ongoing support and maintenance to ensure your success long after launch.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process">
+        <h2>Our Process</h2>
+        <p class="section-description">A streamlined approach to bring your ideas to life efficiently and effectively.</p>
+        
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Discovery</h3>
+                <p>Understanding your business goals, target audience, and project requirements.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Planning</h3>
+                <p>Creating detailed project roadmap, architecture, and technology stack selection.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Development</h3>
+                <p>Agile development with regular updates and iterative feedback cycles.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Testing</h3>
+                <p>Comprehensive quality assurance, security audits, and performance testing.</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">5</div>
+                <h3>Launch</h3>
+                <p>Smooth deployment, monitoring, and post-launch support to ensure success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="features">
+        <h2>About Aewaz</h2>
+        <p class="section-description">At Aewaz, we're passionate about turning innovative ideas into powerful digital realities. Based in Mumbai, India, our team of expert developers and designers combines technical excellence with creative problem-solving to deliver solutions that make a difference.</p>
+        <p class="section-description">With expertise spanning web development, SaaS architecture, and enterprise software solutions, we partner with businesses of all sizes to create technology that drives growth, improves efficiency, and delights users.</p>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        
+        <div class="testimonials-grid">
+            <article class="testimonial-card">
+                <p class="testimonial-text">"Aewaz transformed our outdated website into a modern, high-performing platform. Their attention to detail and technical expertise is exceptional. Highly recommended for any business looking for quality web development."</p>
+                <p class="testimonial-author">Rajesh Kumar</p>
+                <p class="testimonial-role">CEO, TechStart India</p>
+            </article>
+            
+            <article class="testimonial-card">
+                <p class="testimonial-text">"Working with Aewaz on our SaaS product was a game-changer. They understood our vision and delivered beyond expectations. The team is professional, responsive, and truly cares about client success."</p>
+                <p class="testimonial-author">Priya Sharma</p>
+                <p class="testimonial-role">Founder, CloudSync Solutions</p>
+            </article>
+            
+            <article class="testimonial-card">
+                <p class="testimonial-text">"Outstanding software support services! Aewaz keeps our systems running flawlessly 24/7. Their proactive monitoring and quick response times have been invaluable to our operations."</p>
+                <p class="testimonial-author">Amit Patel</p>
+                <p class="testimonial-role">CTO, FinTech Innovations</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Start Your Project?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Let's discuss how Aewaz can help transform your business with custom digital solutions.</p>
+        <a href="#contact" class="btn btn-primary">Get a Free Consultation</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p class="section-description">Have a project in mind? Let's talk about how we can help you achieve your goals.</p>
+        
+        <div style="max-width: 600px; margin: 2rem auto; text-align: center;">
+            <p style="margin: 1rem 0;"><strong>Email:</strong> <a href="mailto:hello@aewaz.com" style="color: #667eea;">hello@aewaz.com</a></p>
+            <p style="margin: 1rem 0;"><strong>Location:</strong> Mumbai, Maharashtra, India</p>
+            <p style="margin: 1rem 0;"><strong>Business Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM IST</p>
+            
+            <div style="margin-top: 2rem;">
+                <a href="mailto:hello@aewaz.com" class="btn btn-primary">Send us an Email</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Aewaz Solutions</h4>
+                <p>Professional web development and SaaS solutions for modern businesses. Based in Mumbai, serving clients across India and globally.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Web Development</a></li>
+                    <li><a href="#services">SaaS Development</a></li>
+                    <li><a href="#services">Software Support</a></li>
+                    <li><a href="#services">E-commerce Solutions</a></li>
+                    <li><a href="#services">API Development</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#process">Our Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="mailto:hello@aewaz.com">hello@aewaz.com</a></li>
+                    <li><a href="https://linkedin.com/company/aewaz" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="https://twitter.com/aewaz" target="_blank" rel="noopener">Twitter</a></li>
+                    <li><a href="https://github.com/aewaz" target="_blank" rel="noopener">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Aewaz. All rights reserved. | <a href="/privacy" style="color: #cbd5e0;">Privacy Policy</a> | <a href="/terms" style="color: #cbd5e0;">Terms of Service</a></p>
+        </div>
+    </footer>
+</body>
+</html>
