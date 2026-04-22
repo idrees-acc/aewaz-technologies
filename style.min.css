@@ -1180,6 +1180,10 @@
     width: 100%;
   }
 
+  .max-w-\[4px\] {
+    max-width: 4px;
+  }
+
   .max-w-\[200px\] {
     max-width: 200px;
   }
