@@ -1,0 +1,13 @@
+{
+  "name": "aewaz-technologies",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "node build.js",
+    "preview": "vite preview --outDir dist"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}

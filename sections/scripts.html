@@ -1,0 +1,192 @@
+    <script
+      data-cfasync="false"
+      src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // section menu active
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".menu-scroll");
+        const scrollPos =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
+
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (
+            refElement.offsetTop <= scrollTopMinus &&
+            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+          ) {
+            document.querySelector(".menu-scroll").classList.remove("active");
+            currLink.classList.add("active");
+          } else {
+            currLink.classList.remove("active");
+          }
+        }
+      }
+
+      window.document.addEventListener("scroll", onScroll);
+
+      // Smooth scroll without changing URL hash
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          var target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // ==== About Tabs
+      const tabButtons = document.querySelectorAll(".tabButtons button");
+      const tabPanels = document.querySelectorAll(".tabPanel");
+
+      function showPanel(panelIndex) {
+        tabButtons.forEach(function (node) {
+          node.classList.remove(
+            "text-primary",
+            "border-primary",
+            "dark:border-primary"
+          );
+        });
+        tabButtons[panelIndex].classList.add(
+          "text-primary",
+          "dark:text-white",
+          "border-primary",
+          "dark:border-primary"
+        );
+        tabPanels.forEach(function (node) {
+          node.style.display = "none";
+        });
+        tabPanels[panelIndex].style.display = "flex";
+      }
+      showPanel(0);
+    </script>
+    <script>
+      const testimonials = [
+        {
+          text: `Working with Aewaz on our SaaS product was a
+                        game-changer. They understood our vision and delivered
+                        beyond expectations. The team is professional,
+                        responsive, and truly cares about client success.`,
+          name: "Asad Udaipur",
+          title: "Director @Gemman Enterprises",
+        },
+        {
+          text: `Outstanding software support services! Aewaz keeps our
+                        systems running flawlessly 24/7. Their proactive
+                        monitoring and quick response times have been invaluable
+                        to our operations.`,
+          name: "Rishabh Verma",
+          title: "Founder @RV Events",
+        },
+        {
+          text: `Aewaz transformed our outdated website into a modern,
+                        high-performing platform. Their attention to detail and
+                        technical expertise is exceptional. Highly recommended
+                        for any business looking for quality web development.`,
+          name: "Aashiq Rangwala",
+          title: "Owner @Extreme Blinds.",
+        },
+        {
+          text: `Working with Aewaz Technologies has been a great
+                        experience. Their digital expertise helped us showcase
+                        our products more effectively and reach more customers
+                        online. We appreciate their professional approach and
+                        creative support.`,
+          name: "Yusuf Bhavnagarwala",
+          title: "Founder @Burhani Steels.",
+        },
+      ];
+
+      let currentIndex = 0;
+
+      const testimonialText = document.getElementById("testimonialText");
+      const authorName = document.getElementById("authorName");
+      const authorTitle = document.getElementById("authorTitle");
+      const navDots = document.querySelectorAll(".nav-dot");
+
+      function updateTestimonial(index) {
+        currentIndex = index;
+
+        // Add fade animation
+        testimonialText.classList.remove("fade-in");
+        authorName.classList.remove("fade-in");
+        authorTitle.classList.remove("fade-in");
+
+        setTimeout(() => {
+          testimonialText.textContent = testimonials[index].text;
+          authorName.textContent = testimonials[index].name;
+          authorTitle.textContent = testimonials[index].title;
+
+          testimonialText.classList.add("fade-in");
+          authorName.classList.add("fade-in");
+          authorTitle.classList.add("fade-in");
+        }, 50);
+
+        // Update nav dots
+        navDots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.add("active");
+          } else {
+            dot.classList.remove("active");
+          }
+        });
+      }
+
+      // Add click events to nav dots
+      navDots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          const index = parseInt(dot.getAttribute("data-index"));
+          updateTestimonial(index);
+        });
+      });
+
+      // Auto-rotate testimonials every 5 seconds
+      setInterval(() => {
+        const nextIndex = (currentIndex + 1) % testimonials.length;
+        updateTestimonial(nextIndex);
+      }, 5000);
+    </script>
+    <script defer="" src="bundle.min.js"></script>
+    <!-- <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'95d7bcc7c972fff3',t:'MTc1MjIzMTAwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script> -->
