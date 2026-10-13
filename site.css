@@ -250,7 +250,7 @@ body::before {
 .contact > * { position: relative; }
 .contact .h2 { max-width: 14em; }
 .contact-lede { color: var(--soft); margin: 18px 0 36px; max-width: 34em; }
-.channels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.channels { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .channel { display: flex; flex-direction: column; gap: 6px; padding: 22px; border-radius: 18px; background: color-mix(in srgb, var(--bg) 80%, transparent); border: 1px solid var(--line); min-width: 0; transition: border-color 0.2s, transform 0.2s; }
 a.channel:hover { border-color: var(--acc-2); transform: translateY(-2px); }
 .channel b { font-size: 17px; overflow-wrap: anywhere; }
