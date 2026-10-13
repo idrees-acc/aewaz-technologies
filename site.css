@@ -240,6 +240,7 @@ body::before {
 .facts div { background: var(--bg); padding: 18px 20px; }
 .facts dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mute); }
 .facts dd { margin: 6px 0 0; font-weight: 600; }
+.facts .wide { grid-column: 1 / -1; }
 .about-img { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 40px 80px -40px var(--shadow); }
 .about-img img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 
