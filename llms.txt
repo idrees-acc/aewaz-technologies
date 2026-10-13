@@ -1,0 +1,25 @@
+# Aewaz Technologies
+
+> Web and SaaS development company in Goregaon West, Mumbai, India, founded in 2024. One team designs, builds and supports websites, SaaS products, e-commerce stores, APIs and cloud infrastructure, with technical SEO, Lighthouse performance and security hardening built in.
+
+## Services
+
+- [Custom websites](https://aewaz.com/#services): responsive, server-side rendered sites in React, Next.js and Angular
+- [SaaS products](https://aewaz.com/#services): architecture, authentication, billing, dashboards, deployment and scaling with Node.js microservices and micro-frontends
+- [E-commerce](https://aewaz.com/#services): online stores with payments and inventory, including Magento and PHP
+- [APIs & integrations](https://aewaz.com/#services): REST and GraphQL APIs, Express.js, MongoDB and third-party integrations
+- [Cloud & DevOps](https://aewaz.com/#services): AWS, Google Cloud, Azure, Kubernetes, Jenkins and CI/CD
+- [SEO & performance](https://aewaz.com/#services): technical SEO, structured data, Core Web Vitals and Lighthouse score optimisation
+- [Security & support](https://aewaz.com/#services): monitoring, bug fixes and remediation of VAPT and red-team findings (OWASP Top 10)
+
+## Work and proof
+
+- [Selected work](https://aewaz.com/#work): websites for RV Events, Gemman Enterprises, Nafees Biryani, Extreme Blinds and Ameen Steels
+- [Client testimonials](https://aewaz.com/#testimonials)
+- [Lighthouse scorecard](https://aewaz.com/#services): this site's own scores, measured with Lighthouse 12
+
+## Company
+
+- [About](https://aewaz.com/#about): based in Goregaon West, Mumbai; languages English, Hindi, Gujarati and Marathi; industries include finance and investments, media and streaming, travel and hospitality, events, manufacturing, and food and retail
+- [Contact](https://aewaz.com/#contact): phone +91 79775 78589, email aewaztechnologies@gmail.com, office 502, Corporate Arena, Sitaram Patkar Rd, Piramal Nagar, Goregaon West, Mumbai 400104
+- [Privacy Policy](https://aewaz.com/privacy-policy.html)

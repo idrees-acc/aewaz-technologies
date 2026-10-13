@@ -20,7 +20,7 @@ const inlined = resolved.replace(
 );
 writeFileSync(resolve(outDir, 'index.html'), inlined);
 
-for (const f of ['site.css', 'favicon.ico', 'CNAME', 'robots.txt', 'sitemap.xml', 'privacy-policy.html']) {
+for (const f of ['site.css', 'favicon.ico', 'CNAME', 'robots.txt', 'sitemap.xml', 'privacy-policy.html', 'llms.txt']) {
   cpSync(resolve(__dirname, f), resolve(outDir, f));
 }
 cpSync(resolve(__dirname, 'src'), resolve(outDir, 'src'), { recursive: true });
