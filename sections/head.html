@@ -52,7 +52,13 @@
     />
     <meta
       property="og:image"
-      content="https://aewaz.com/src/images/logo/aewaz.svg"
+      content="https://aewaz.com/src/images/og-image.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Aewaz Technologies: web and SaaS development company in Mumbai"
     />
 
     <!-- Twitter -->
@@ -68,96 +74,168 @@
     />
     <meta
       property="twitter:image"
-      content="https://aewaz.com/src/images/logo/aewaz.svg"
+      content="https://aewaz.com/src/images/og-image.jpg"
     />
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Structured Data -->
+    <!-- Structured Data: one business entity + website (validated JSON) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Aewaz",
-        "alternateName": "Aewaz Solutions",
-        "url": "https://aewaz.com",
-        "logo": "https://aewaz.com/src/images/logo/aewaz.svg",
-        "description": "Professional web development and SaaS solutions provider specializing in custom software services",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Mumbai",
-          "addressRegion": "Maharashtra",
-          "addressCountry": "IN"
-        },
-        "contactPoint": [
+        "@graph": [
           {
-            "@type": "ContactPoint",
-            "contactType": "Sales",
+            "@type": [
+              "ProfessionalService",
+              "Organization"
+            ],
+            "@id": "https://aewaz.com/#organization",
+            "name": "Aewaz Technologies",
+            "alternateName": "Aewaz",
+            "url": "https://aewaz.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://aewaz.com/src/images/logo/aewaz.png",
+              "width": 2084,
+              "height": 2084
+            },
+            "image": "https://aewaz.com/src/images/logo/aewaz.png",
+            "description": "Web, SaaS, e-commerce and API development and software support for startups, SMEs and enterprises.",
+            "slogan": "Pixels to Profits: Your Tech Partner for Growth",
+            "foundingDate": "2024",
+            "telephone": "+917977578589",
             "email": "aewaztechnologies@gmail.com",
-            "availableLanguage": ["English", "Hindi", "Gujarati", "Marathi"]
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "502, Corporate Arena, Sitaram Patkar Rd, Piramal Nagar, Goregaon West",
+              "addressLocality": "Mumbai",
+              "addressRegion": "Maharashtra",
+              "postalCode": "400104",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 19.1626,
+              "longitude": 72.8397
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00:00",
+              "closes": "21:00:00"
+            },
+            "areaServed": [
+              {
+                "@type": "Country",
+                "name": "India"
+              },
+              {
+                "@type": "Place",
+                "name": "Worldwide"
+              }
+            ],
+            "knowsAbout": [
+              "Web development",
+              "SaaS development",
+              "E-commerce development",
+              "API development",
+              "Cloud solutions",
+              "React",
+              "Next.js",
+              "Node.js",
+              "GraphQL",
+              "AWS",
+              "Google Cloud",
+              "Azure"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "telephone": "+917977578589",
+              "email": "aewaztechnologies@gmail.com",
+              "areaServed": "IN",
+              "availableLanguage": [
+                "English",
+                "Hindi",
+                "Gujarati",
+                "Marathi"
+              ]
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom Web Development",
+                    "description": "Responsive, fast, SEO-optimized websites built with React, Next.js and Node.js."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "SaaS Product Development",
+                    "description": "End-to-end SaaS products: architecture, development, deployment and scaling."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "E-commerce Solutions",
+                    "description": "Secure, scalable online stores with payment integration and inventory management."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "API Development & Integration",
+                    "description": "Custom RESTful and GraphQL APIs, third-party integrations and microservices."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cloud Solutions",
+                    "description": "Cloud infrastructure, DevOps, CI/CD pipelines and migration on AWS, Google Cloud and Azure."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Product Lifecycle Support",
+                    "description": "Technical support, monitoring, bug fixes and performance optimization."
+                  }
+                }
+              ]
+            }
           },
           {
-            "@type": "ContactPoint",
-            "email": "aewaztechnologies@gmail.com",
-            "contactType": "customer support"
-          }
-          {
-            "@type": "ContactPoint",
-            "telephone": "+91 79775 78589",
-            "contactType": "customer service"
-          },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+91 79775 78589",
-            "contactType": "mobile"
+            "@type": "WebSite",
+            "@id": "https://aewaz.com/#website",
+            "url": "https://aewaz.com/",
+            "name": "Aewaz Technologies",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://aewaz.com/#organization"
+            }
           }
         ]
-      }
-    </script>
-
-    <!-- Service Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Web Development",
-        "provider": {
-          "@type": "Organization",
-          "name": "Aewaz"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "India"
-        },
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Web Development Services",
-          "itemListElement": [
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Custom Web Development"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "SaaS Product Development"
-              }
-            },
-            {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Software Support & Maintenance"
-              }
-            }
-          ]
-        }
       }
     </script>
 
@@ -202,389 +280,10 @@
     />
     <meta
       name="ai:key_features"
-      content="SEO-optimized websites, Scalable SaaS, 24/7 support, Secure e-commerce, Cloud infrastructure"
+      content="SEO-optimized websites, Scalable SaaS, ongoing support, Secure e-commerce, Cloud infrastructure"
     />
     <meta
       name="ai:value_proposition"
       content="Transform business with expert web, mobile and software development services from idea to launch"
     />
-
-    <!-- Structured Data for AI Processing - Aewaz Technologies -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Aewaz Technologies",
-        "alternateName": "Aewaz",
-        "url": "https://aewaz.com",
-        "logo": "https://aewaz.com/src/images/logo/aewaz.svg",
-        "slogan": "Pixels to Profits: Your Tech Partner for Growth",
-        "description": "Transform your business with Aewaz Technologies. Expert web, mobile & software development services. Secure, scalable solutions from idea to launch.",
-        "foundingDate": "2024",
-        "foundingLocation": {
-          "@type": "Place",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Mumbai",
-            "addressRegion": "Maharashtra",
-            "addressCountry": "IN"
-          }
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-79775-78589",
-          "contactType": "Customer Service",
-          "email": "aewaztechnologies@gmail.com",
-          "areaServed": "IN",
-          "availableLanguage": ["English", "Hindi"]
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "502, Corporate Arena, Sitaram Patkar Rd, Piramal Nagar",
-          "addressLocality": "Goregaon West, Mumbai",
-          "addressRegion": "Maharashtra",
-          "postalCode": "400104",
-          "addressCountry": "IN"
-        },
-        "areaServed": {
-          "@type": "Place",
-          "name": "Global"
-        }
-      }
-    </script>
-
-    <!-- Structured Data: Services Offered -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Aewaz Technologies Core Services",
-        "description": "Comprehensive digital solutions tailored to your business needs",
-        "itemListElement": [
-          {
-            "@type": "Service",
-            "position": 1,
-            "name": "Custom Web Development",
-            "description": "Responsive, fast, and SEO-optimized websites built with modern frameworks like React, Next.js, and Node.js. We create web experiences that engage users and drive conversions.",
-            "serviceType": "Web Development",
-            "provider": {
-              "@type": "Organization",
-              "name": "Aewaz Technologies"
-            },
-            "areaServed": "Global",
-            "category": "Software Development"
-          },
-          {
-            "@type": "Service",
-            "position": 2,
-            "name": "SaaS Product Development",
-            "description": "End-to-end SaaS solutions from concept to launch. We handle architecture, development, deployment, and scaling to help you build the next big thing.",
-            "serviceType": "SaaS Development",
-            "provider": {
-              "@type": "Organization",
-              "name": "Aewaz Technologies"
-            },
-            "areaServed": "Global",
-            "category": "Software Development"
-          },
-          {
-            "@type": "Service",
-            "position": 3,
-            "name": "Product Lifecycle Support",
-            "description": "24/7 technical support, system monitoring, bug fixes, and performance optimization. Keep your applications running smoothly with our dedicated support team.",
-            "serviceType": "Technical Support",
-            "provider": {
-              "@type": "Organization",
-              "name": "Aewaz Technologies"
-            },
-            "areaServed": "Global",
-            "availableChannel": {
-              "@type": "ServiceChannel",
-              "servicePhone": {
-                "@type": "ContactPoint",
-                "telephone": "+91-79775-78589"
-              }
-            }
-          },
-          {
-            "@type": "Service",
-            "position": 4,
-            "name": "E-commerce Solutions",
-            "description": "Powerful online stores that convert visitors into customers. We build secure, scalable e-commerce platforms with seamless payment integration and inventory management.",
-            "serviceType": "E-commerce Development",
-            "provider": {
-              "@type": "Organization",
-              "name": "Aewaz Technologies"
-            },
-            "areaServed": "Global",
-            "category": "E-commerce"
-          },
-          {
-            "@type": "Service",
-            "position": 5,
-            "name": "API Development & Integration",
-            "description": "Custom RESTful and GraphQL APIs, third-party integrations, and microservices architecture. Connect your systems seamlessly for enhanced functionality.",
-            "serviceType": "API Development",
-            "provider": {
-              "@type": "Organization",
-              "name": "Aewaz Technologies"
-            },
-            "areaServed": "Global",
-            "category": "Software Development"
-          },
-          {
-            "@type": "Service",
-            "position": 6,
-            "name": "Cloud Solutions",
-            "description": "Scalable cloud infrastructure on AWS, Google Cloud, and Azure. We handle deployment, DevOps, CI/CD pipelines, and cloud migration for optimal performance.",
-            "serviceType": "Cloud Computing",
-            "provider": {
-              "@type": "Organization",
-              "name": "Aewaz Technologies"
-            },
-            "areaServed": "Global",
-            "category": "Cloud Services"
-          }
-        ]
-      }
-    </script>
-
-    <!-- Structured Data: Local Business -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Aewaz Technologies",
-        "image": "https://aewaz.com/src/images/logo/aewaz.svg",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "502, Corporate Arena, Sitaram Patkar Rd, Piramal Nagar",
-          "addressLocality": "Goregaon West, Mumbai",
-          "addressRegion": "Maharashtra",
-          "postalCode": "400104",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "19.1626",
-          "longitude": "72.8397"
-        },
-        "telephone": "+91-79775-78589",
-        "email": "aewaztechnologies@gmail.com",
-        "url": "https://aewaz.com",
-        "priceRange": "$$",
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "21:00"
-        }
-      }
-    </script>
-
-    <!-- Structured Data: Client Reviews -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Aewaz Technologies",
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "1"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Asad Udaipur"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5"
-            },
-            "reviewBody": "Working with Aewaz on our SaaS product was a game-changer. They understood our vision and delivered beyond expectations. The team is professional, responsive, and truly cares about client success.",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Gemman Enterprises"
-            }
-          },
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Taher Ratlamwala"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4"
-            },
-            "reviewBody": "Outstanding software support services! Aewaz keeps our systems running flawlessly 24/7. Their proactive monitoring and quick response times have been invaluable to our operations.",
-            "publisher": {
-              "@type": "Organization",
-              "name": "RV Events"
-            }
-          },
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Aashiq Rangwala"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.5"
-            },
-            "reviewBody": "Aewaz transformed our outdated website into a modern, high-performing platform. Their attention to detail and technical expertise is exceptional. Highly recommended for any business looking for quality web development.",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Extreme Blinds"
-            }
-          },
-          {
-            "@type": "Review",
-            "author": {
-              "@type": "Person",
-              "name": "Saifuddin Bhavnagarwala"
-            },
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "4.8"
-            },
-            "reviewBody": "Working with Aewaz Technologies has been a great experience. Their digital expertise helped us showcase our products more effectively and reach more customers online. We appreciate their professional approach and creative support.",
-            "publisher": {
-              "@type": "Organization",
-              "name": "Ameen Steels"
-            }
-          }
-        ]
-      }
-    </script>
-
-    <!-- Structured Data: Technology Stack -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "TechArticle",
-        "name": "Aewaz Technologies Tech Stack",
-        "description": "Modern technology stack used by Aewaz Technologies for development",
-        "proficiencyLevel": "Expert",
-        "dependencies": [
-          "React",
-          "Next.js",
-          "Node.js",
-          "RESTful API",
-          "GraphQL",
-          "AWS",
-          "Google Cloud",
-          "Azure",
-          "DevOps",
-          "CI/CD"
-        ]
-      }
-    </script>
-
-    <!-- Structured Data: Client Portfolio -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Aewaz Technologies Client Portfolio",
-        "description": "Trusted clients and successful projects",
-        "itemListElement": [
-          {
-            "@type": "Organization",
-            "position": 1,
-            "name": "RV Events",
-            "url": "https://rvevents.org/"
-          },
-          {
-            "@type": "Organization",
-            "position": 2,
-            "name": "Gemman Enterprises",
-            "url": "https://gemman.in/"
-          },
-          {
-            "@type": "Organization",
-            "position": 3,
-            "name": "Nafees Biryani",
-            "url": "https://nafeesbiryani.in/"
-          },
-          {
-            "@type": "Organization",
-            "position": 4,
-            "name": "Extreme Blinds",
-            "url": "https://extremeblinds.github.io/extremeblinds/"
-          },
-          {
-            "@type": "Organization",
-            "position": 5,
-            "name": "Ameen Steels",
-            "url": "https://ameensteels.com/"
-          }
-        ]
-      }
-    </script>
-
-    <!-- Structured Data: WebSite with Search Action -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Aewaz Technologies",
-        "url": "https://aewaz.com",
-        "description": "Transform your business with Aewaz Technologies. Expert web, mobile & software development services from idea to launch.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Aewaz Technologies",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://aewaz.com/src/images/logo/aewaz.svg"
-          }
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://aewaz.com/?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
-
-    <!-- Structured Data: BreadcrumbList -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://aewaz.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Features",
-            "item": "https://aewaz.com/#features"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "About Us",
-            "item": "https://aewaz.com/#about"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Support",
-            "item": "https://aewaz.com/#support"
-          }
-        ]
-      }
-    </script>
   </head>
