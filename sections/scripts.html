@@ -12,7 +12,7 @@
         }
         themeBtn.addEventListener("click", function () {
           root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
-          try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+          try { sessionStorage.setItem("theme", root.dataset.theme); } catch (e) {}
           syncTheme();
         });
         syncTheme();
