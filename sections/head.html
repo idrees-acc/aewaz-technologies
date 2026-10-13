@@ -35,7 +35,24 @@
     <meta name="robots" content="index, follow" />
 
     <link rel="icon" href="src/images/logo/aewaz.svg" />
-    <link href="style.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#0b0710" />
+    <script>
+      try {
+        var t = localStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          t || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    />
+    <link href="site.css" rel="stylesheet" />
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aewaz.com/" />
 
@@ -76,10 +93,6 @@
       property="twitter:image"
       content="https://aewaz.com/src/images/og-image.jpg"
     />
-
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Structured Data: one business entity + website (validated JSON) -->
     <script type="application/ld+json">
