@@ -15,7 +15,7 @@ const resolved = html.replace(
 );
 writeFileSync(resolve(outDir, 'index.html'), resolved);
 
-for (const f of ['bundle.min.js', 'style.min.css', 'favicon.ico', 'CNAME', 'robots.txt', 'sitemap.xml']) {
+for (const f of ['bundle.min.js', 'style.min.css', 'favicon.ico', 'CNAME', 'robots.txt', 'sitemap.xml', 'privacy-policy.html']) {
   cpSync(resolve(__dirname, f), resolve(outDir, f));
 }
 cpSync(resolve(__dirname, 'src'), resolve(outDir, 'src'), { recursive: true });
