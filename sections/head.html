@@ -9,7 +9,12 @@
           dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
+        // Load analytics after the page is interactive so it doesn't delay first paint
+        w.addEventListener("load", function () {
+          (w.requestIdleCallback || setTimeout)(function () {
+            f.parentNode.insertBefore(j, f);
+          }, { timeout: 3000 });
+        });
       })(window, document, "script", "dataLayer", "GTM-TVMC5L5V");
     </script>
     <!-- End Google Tag Manager -->
@@ -38,10 +43,14 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap" /></noscript>
     <link href="site.css" rel="stylesheet" />
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aewaz.com/" />
@@ -180,6 +189,8 @@
               "Prompt engineering",
               "Technical SEO",
               "Core Web Vitals",
+              "Lighthouse score optimisation",
+              "Web performance optimisation",
               "Structured data",
               "Application security",
               "VAPT remediation",
@@ -255,7 +266,7 @@
                   "itemOffered": {
                     "@type": "Service",
                     "name": "SEO & Performance",
-                    "description": "Technical SEO, server-side rendering, structured data and Core Web Vitals optimisation."
+                    "description": "Technical SEO, Lighthouse score optimisation, server-side rendering, structured data and Core Web Vitals tuning."
                   }
                 },
                 {
@@ -309,7 +320,7 @@
     />
     <meta
       name="ai:tech_stack"
-      content="JavaScript, TypeScript, React, Next.js, Angular, Node.js, Express.js, REST, GraphQL, MongoDB, MySQL, PostgreSQL, PHP, Magento, Microservices, Micro-frontends, Nx monorepos, Next.js SSR, Angular SSR, AWS, Google Cloud, Azure, Kubernetes, Jenkins, CI/CD, Jest, Jasmine, Prompt engineering, Technical SEO, Core Web Vitals, VAPT remediation, OWASP Top 10"
+      content="JavaScript, TypeScript, React, Next.js, Angular, Node.js, Express.js, REST, GraphQL, MongoDB, MySQL, PostgreSQL, PHP, Magento, Microservices, Micro-frontends, Nx monorepos, Next.js SSR, Angular SSR, AWS, Google Cloud, Azure, Kubernetes, Jenkins, CI/CD, Jest, Jasmine, Prompt engineering, Technical SEO, Lighthouse score optimisation, Core Web Vitals, VAPT remediation, OWASP Top 10"
     />
     <meta
       name="ai:specialization"
