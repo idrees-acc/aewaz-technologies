@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "node build.js",
-    "preview": "vite preview --outDir dist"
+    "preview": "vite preview --outDir dist",
+    "local": "node build.js && vite preview --outDir dist --port 8765 --strictPort --open"
   },
   "devDependencies": {
     "vite": "^6.3.5"
