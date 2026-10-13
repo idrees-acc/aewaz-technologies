@@ -35,7 +35,7 @@
       try {
         var t = localStorage.getItem("theme");
         document.documentElement.dataset.theme =
-          t || (matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+          t || "dark";
       } catch (e) {
         document.documentElement.dataset.theme = "dark";
       }
