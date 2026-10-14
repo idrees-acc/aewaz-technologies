@@ -9,33 +9,50 @@
           dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
+        // Load analytics after the page is interactive so it doesn't delay first paint
+        w.addEventListener("load", function () {
+          (w.requestIdleCallback || setTimeout)(function () {
+            f.parentNode.insertBefore(j, f);
+          }, { timeout: 3000 });
+        });
       })(window, document, "script", "dataLayer", "GTM-TVMC5L5V");
     </script>
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Aewaz Technologies | Pixels to Profits: Your Tech Partner for Growth
-    </title>
-    <meta
-      name="title"
-      content="Aewaz Technologies | Pixels to Profits: Your Tech Partner for Growth"
-    />
+    <title>Web &amp; SaaS Development Company in Mumbai | Aewaz Technologies</title>
     <meta
       name="description"
-      content="Transform your business with Aewaz Technologies. Expert web, mobile & software development services. Secure, scalable solutions from idea to launch."
-    />
-    <meta
-      name="keywords"
-      content="Aewaz Solutions, Aewaz Technologies, Aewaz Software Services, Pixels to Profits: Your Tech Partner for Growth, web development, software development, mobile apps, eCommerce development, enterprise software, custom applications, UI/UX design, cloud solutions, digital product development, SaaS development, mobile app development, iOS apps, Android app development, Flutter development, React Native apps, cross-platform apps, custom mobile applications, app UI/UX, mobile backend development, app store deployment, enterprise software, custom business software, digital transformation, ERP solutions, CRM development, enterprise app development, secure software architecture, backend systems, business process automation, enterprise tech consulting, enterprise software, custom business software, digital transformation, ERP solutions, CRM development, enterprise app development, secure software architecture, backend systems, business process automation, enterprise tech consulting, eCommerce development, online store development, Shopify experts, WooCommerce development, Magento development, custom eCommerce, payment integration, shopping cart solutions, product catalog management, eCommerce UX design, web development Mumbai, SaaS solutions India, custom software development, web design, software support, Aewaz, Mumbai web development, React development, Node.js services, web development services Mumbai, custom software development India, website design and development, web application development, e-commerce development, software support services, React/Node.js development services,web development company, software development, web design, custom software, mobile app development"
+      content="Aewaz Technologies builds websites, SaaS products, e-commerce stores and APIs in Mumbai, with SSR for SEO, AWS cloud and security hardening. Book a call."
     />
     <meta name="author" content="Aewaz" />
     <meta name="robots" content="index, follow" />
 
     <link rel="icon" href="src/images/logo/aewaz.svg" />
-    <link href="style.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#0b0710" />
+    <script>
+      try {
+        localStorage.removeItem("theme");
+        var t = sessionStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          t || "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=JetBrains+Mono:wght@400&family=Krona+One&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=JetBrains+Mono:wght@400&family=Krona+One&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=JetBrains+Mono:wght@400&family=Krona+One&display=swap" /></noscript>
+    <link href="site.css" rel="stylesheet" />
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aewaz.com/" />
 
@@ -44,11 +61,11 @@
     <meta property="og:url" content="https://aewaz.com/" />
     <meta
       property="og:title"
-      content="Aewaz Technologies | Pixels to Profits: Your Tech Partner for Growth"
+      content="Web &amp; SaaS Development Company in Mumbai | Aewaz Technologies"
     />
     <meta
       property="og:description"
-      content="Premium web development and SaaS solutions for modern businesses. Custom software services tailored to your needs."
+      content="Websites, SaaS, e-commerce and APIs from a Mumbai engineering studio, built for search, speed and security."
     />
     <meta
       property="og:image"
@@ -66,20 +83,16 @@
     <meta property="twitter:url" content="https://aewaz.com/" />
     <meta
       property="twitter:title"
-      content="Aewaz Technologies | Pixels to Profits: Your Tech Partner for Growth"
+      content="Web &amp; SaaS Development Company in Mumbai | Aewaz Technologies"
     />
     <meta
       property="twitter:description"
-      content="Premium web development and SaaS solutions for modern businesses."
+      content="Websites, SaaS, e-commerce and APIs from a Mumbai engineering studio, built for search, speed and security."
     />
     <meta
       property="twitter:image"
       content="https://aewaz.com/src/images/og-image.jpg"
     />
-
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- Structured Data: one business entity + website (validated JSON) -->
     <script type="application/ld+json">
@@ -97,11 +110,11 @@
             "url": "https://aewaz.com/",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://aewaz.com/src/images/logo/aewaz.png",
-              "width": 2084,
-              "height": 2084
+              "url": "https://aewaz.com/src/images/logo/aewaz-512.png",
+              "width": 512,
+              "height": 512
             },
-            "image": "https://aewaz.com/src/images/logo/aewaz.png",
+            "image": "https://aewaz.com/src/images/logo/aewaz-512.png",
             "description": "Web, SaaS, e-commerce and API development and software support for startups, SMEs and enterprises.",
             "slogan": "Pixels to Profits: Your Tech Partner for Growth",
             "foundingDate": "2024",
@@ -149,13 +162,40 @@
               "E-commerce development",
               "API development",
               "Cloud solutions",
+              "JavaScript",
+              "TypeScript",
               "React",
               "Next.js",
+              "Angular",
               "Node.js",
+              "Express.js",
               "GraphQL",
+              "MongoDB",
+              "MySQL",
+              "PostgreSQL",
+              "PHP",
+              "Magento",
+              "Microservices",
+              "Micro-frontends",
+              "Server-side rendering",
+              "Next.js SSR",
+              "Angular SSR",
               "AWS",
               "Google Cloud",
-              "Azure"
+              "Azure",
+              "Kubernetes",
+              "Jenkins",
+              "CI/CD",
+              "Jest",
+              "Prompt engineering",
+              "Technical SEO",
+              "Core Web Vitals",
+              "Lighthouse score optimisation",
+              "Web performance optimisation",
+              "Structured data",
+              "Application security",
+              "VAPT remediation",
+              "OWASP Top 10"
             ],
             "contactPoint": {
               "@type": "ContactPoint",
@@ -221,6 +261,22 @@
                     "name": "Product Lifecycle Support",
                     "description": "Technical support, monitoring, bug fixes and performance optimization."
                   }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "SEO & Performance",
+                    "description": "Technical SEO, Lighthouse score optimisation, server-side rendering, structured data and Core Web Vitals tuning."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Application Security Hardening",
+                    "description": "Remediation of VAPT and red-team findings, OWASP Top 10 fixes and secure configuration."
+                  }
                 }
               ]
             }
@@ -265,7 +321,7 @@
     />
     <meta
       name="ai:tech_stack"
-      content="React, Next.js, Node.js, RESTful API, GraphQL, AWS, Google Cloud, Azure"
+      content="JavaScript, TypeScript, React, Next.js, Angular, Node.js, Express.js, REST, GraphQL, MongoDB, MySQL, PostgreSQL, PHP, Magento, Microservices, Micro-frontends, Nx monorepos, Next.js SSR, Angular SSR, AWS, Google Cloud, Azure, Kubernetes, Jenkins, CI/CD, Jest, Jasmine, Prompt engineering, Technical SEO, Lighthouse score optimisation, Core Web Vitals, VAPT remediation, OWASP Top 10"
     />
     <meta
       name="ai:specialization"
@@ -284,6 +340,6 @@
     />
     <meta
       name="ai:value_proposition"
-      content="Transform business with expert web, mobile and software development services from idea to launch"
+      content="Websites, SaaS products, e-commerce and APIs built for search, speed and security, from idea to launch"
     />
   </head>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found | Aewaz Technologies</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/src/images/logo/aewaz.svg" />
+    <script>
+      try {
+        localStorage.removeItem("theme");
+        var t = sessionStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          t || "light";
+      } catch (e) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=JetBrains+Mono:wght@400&family=Krona+One&display=swap"
+    />
+    <link href="/site.css" rel="stylesheet" />
+    <style>
+      .nf { position: relative; min-height: 100dvh; display: grid; place-items: center; overflow: hidden; padding: 48px 0; }
+      .nf-inner { position: relative; max-width: 640px; }
+      .nf-code { font: 400 clamp(96px, 22vw, 200px)/0.85 var(--display); letter-spacing: -0.06em;
+        background: linear-gradient(100deg, var(--grad-1) 5%, var(--grad-2) 50%, var(--grad-3) 90%);
+        -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .nf h1 { font: 400 clamp(26px, 4vw, 40px)/1.1 var(--display); letter-spacing: -0.04em; margin: 20px 0 14px; }
+      .nf p { color: var(--soft); max-width: 32em; }
+      .nf-links { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; margin-top: 32px; }
+      .nf-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px; }
+      .nf-list a { font-size: 14px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--soft); min-height: 40px; display: inline-flex; align-items: center; }
+      .nf-list a:hover { border-color: var(--acc-2); color: var(--ink); }
+    </style>
+  </head>
+  <body>
+    <main class="nf">
+      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="wrap nf-inner">
+        <p class="mono">Error 404</p>
+        <div class="nf-code" aria-hidden="true">404</div>
+        <h1>This page didn't make it to production.</h1>
+        <p>The link may be old or mistyped. Everything we do is on the homepage, and we're one message away if you were looking for something specific.</p>
+        <div class="nf-links">
+          <a class="btn btn-accent" href="/">Go to the homepage</a>
+          <a class="link" href="/#contact">Talk to us</a>
+        </div>
+        <nav class="nf-list" aria-label="Popular sections">
+          <a href="/#services">Services</a>
+          <a href="/#work">Work</a>
+          <a href="/#about">About</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+        </nav>
+      </div>
+    </main>
+  </body>
+</html>
