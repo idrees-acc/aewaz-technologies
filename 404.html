@@ -11,9 +11,9 @@
         localStorage.removeItem("theme");
         var t = sessionStorage.getItem("theme");
         document.documentElement.dataset.theme =
-          t || "dark";
+          t || "light";
       } catch (e) {
-        document.documentElement.dataset.theme = "dark";
+        document.documentElement.dataset.theme = "light";
       }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
