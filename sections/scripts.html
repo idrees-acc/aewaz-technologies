@@ -31,6 +31,23 @@
         });
         document.addEventListener("keydown", function (e) { if (e.key === "Escape") setMenu(false); });
 
+        // In-page links scroll without adding #section to the URL
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest('a[href^="#"]');
+          var el = a && document.getElementById(a.hash.slice(1));
+          if (!el) return;
+          e.preventDefault();
+          el.scrollIntoView();
+          if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "-1");
+          el.focus({ preventScroll: true });
+        });
+        // Arrived via /#contact (404, privacy page): keep the scroll, drop the hash
+        if (location.hash) {
+          var target = document.getElementById(location.hash.slice(1));
+          history.replaceState(null, "", location.pathname);
+          if (target) addEventListener("load", function () { target.scrollIntoView({ behavior: "instant" }); });
+        }
+
         // Highlight the nav link for the section in view, and reveal sections
         if ("IntersectionObserver" in window) {
           var links = {};
