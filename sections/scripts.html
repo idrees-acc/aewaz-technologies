@@ -71,5 +71,42 @@
         } else {
           document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
         }
+
+        // Journey tracking for GA4 via GTM. One-page site = one page_view, so the path
+        // is told by events: view_<section> (once each) and clicks on contacts, CTAs and client sites.
+        var dl = (window.dataLayer = window.dataLayer || []);
+        function where(el) {
+          var s = el.closest("section[id], header, footer");
+          return s ? s.id || s.tagName.toLowerCase() : "page";
+        }
+        if ("IntersectionObserver" in window) {
+          var seen = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (!en.isIntersecting) return;
+              dl.push({ event: "view_" + en.target.id, section: en.target.id });
+              seen.unobserve(en.target);
+            });
+          }, { threshold: 0.4 });
+          document.querySelectorAll("main section[id]").forEach(function (s) { seen.observe(s); });
+        }
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest("a[href]");
+          if (!a) return;
+          var href = a.getAttribute("href"), name;
+          if (href.indexOf("mailto:") === 0) name = "contact_email";
+          else if (href.indexOf("tel:") === 0) name = "contact_phone";
+          else if (a.hostname === "wa.me") name = "contact_whatsapp";
+          else if (href.charAt(0) === "#") name = "cta_" + href.slice(1);
+          else if (a.hostname !== location.hostname) name = "visit_client_site";
+          else return;
+          var card = a.closest("article, li");
+          var h = card && card.querySelector("h3");
+          dl.push({
+            event: name,
+            from_section: where(a),
+            link_text: (h ? h.textContent : a.textContent).trim().slice(0, 100),
+            link_url: a.href
+          });
+        });
       })();
     </script>
