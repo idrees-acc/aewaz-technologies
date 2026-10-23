@@ -14,12 +14,12 @@
 
 ## Work and proof
 
-- [Selected work](https://aewaz.com/#work): websites for RV Events, Gemman Enterprises, Nafees Biryani, Extreme Blinds and Ameen Steels
+- [Selected work](https://aewaz.com/#work): websites for RV Events, Gemman Enterprises, Nafees Biryani (biryani and Dawoodi Bohra cuisine in Malad East, Mumbai), Extreme Blinds and Ameen Steels
 - [Client testimonials](https://aewaz.com/#testimonials)
 - [Lighthouse scorecard](https://aewaz.com/#services): this site's own scores, measured with Lighthouse 12
 
 ## Company
 
-- [About](https://aewaz.com/#about): based in Goregaon West, Mumbai; languages English, Hindi, Gujarati and Marathi; industries include finance and investments, media and streaming, travel and hospitality, events, manufacturing, and food and retail
+- [About](https://aewaz.com/#about): based in Goregaon West, Mumbai; founder from the Dawoodi Bohra community; languages English, Hindi, Gujarati and Marathi; industries include finance and investments, media and streaming, travel and hospitality, events, manufacturing, and food and retail
 - [Contact](https://aewaz.com/#contact): phone +91 79775 78589, email aewaztechnologies@gmail.com, office 502, Corporate Arena, Sitaram Patkar Rd, Piramal Nagar, Goregaon West, Mumbai 400104
 - [Privacy Policy](https://aewaz.com/privacy-policy.html)
