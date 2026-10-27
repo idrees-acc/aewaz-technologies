@@ -153,18 +153,32 @@ body::before {
 .lede { max-width: 33em; color: var(--soft); font-size: clamp(17px, 1.6vw, 19px); margin: 22px 0 34px; text-wrap: pretty; }
 .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
 
-.hero-shots { position: relative; aspect-ratio: 1 / 0.86; }
-.hero-shots figure {
-  position: absolute; width: 76%; margin: 0; border-radius: 14px; overflow: hidden;
-  background: var(--surf); border: 1px solid var(--line); box-shadow: 0 40px 80px -30px var(--shadow);
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+.app {
+  position: relative; margin: 0; padding: 18px; border-radius: var(--radius);
+  background: color-mix(in srgb, var(--surf) 80%, transparent); border: 1px solid var(--line);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 50px 100px -40px var(--shadow); transform: perspective(1400px) rotateY(-9deg) rotateX(4deg);
 }
-.hero-shots figure:nth-child(1) { left: 0; top: 0; }
-.hero-shots figure:nth-child(2) { right: 0; top: 24%; }
-.hero-shots figure:nth-child(3) { left: 11%; top: 50%; }
-.hero-shots figure:hover { transform: translateY(-6px); z-index: 1; }
-.hero-shots figcaption { padding: 6px 12px; font-size: 11px; letter-spacing: 0.04em; text-transform: none; border-bottom: 1px solid var(--line); }
-.hero-shots img { width: 100%; aspect-ratio: 1280 / 760; object-fit: cover; object-position: top; }
+.app-top { display: flex; gap: 6px; margin-bottom: 14px; }
+.app-top i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.kpi { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px; }
+.kpi small { display: block; color: var(--mute); font-size: 12px; }
+.kpi b { display: block; font: 600 22px/1.2 var(--body); letter-spacing: -0.03em; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.kpi em { font-style: normal; color: var(--good); font-size: 12px; font-weight: 600; }
+.chart { margin-top: 10px; height: 180px; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 14px; display: flex; align-items: flex-end; gap: 8px; }
+.chart i { flex: 1; border-radius: 6px 6px 2px 2px; background: var(--bar); transform-origin: bottom; }
+.js .chart i { animation: grow 0.9s cubic-bezier(0.2, 0.9, 0.3, 1.2) both; }
+.chart i:nth-child(n) { animation-delay: calc(var(--i, 0) * 60ms); }
+@keyframes grow { from { transform: scaleY(0.05); } }
+.toast {
+  position: absolute; left: -28px; bottom: -22px; display: flex; gap: 10px; align-items: center;
+  background: var(--surf); border: 1px solid var(--line); border-radius: 16px; padding: 10px 14px;
+  font-size: 14px; font-weight: 600; box-shadow: 0 24px 50px -20px var(--shadow);
+}
+.toast .tick { width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; color: #fff; background: #1f8a57; }
+.toast small { display: block; font-weight: 400; color: var(--mute); font-size: 12px; }
+.app-caption { margin-top: 34px; text-align: right; }
 
 .stats { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: clamp(48px, 6vw, 72px) 0 0; border-block: 1px solid var(--line); }
 .stats div { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 2px; padding: 22px 24px; border-left: 1px solid var(--line); }
@@ -284,7 +298,8 @@ a.channel:hover { border-color: var(--acc-2); transform: translateY(-2px); }
   .stack-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .proof { grid-template-columns: 1fr; }
   .hero-grid, .about { grid-template-columns: 1fr; }
-  .hero-shots { max-width: 620px; }
+  .app { transform: none; max-width: 560px; }
+  .toast { left: 12px; }
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stats div:nth-child(3) { border-left: 0; padding-left: 0; }
   .stats div:nth-child(n + 3) { border-top: 1px solid var(--line); }
@@ -319,6 +334,8 @@ a.channel:hover { border-color: var(--acc-2); transform: translateY(-2px); }
   .case:nth-child(5) { grid-column: span 1; }
   .quotes { columns: 1; }
   .facts { grid-template-columns: 1fr; }
+  .kpi b { font-size: 18px; }
+  .chart { height: 140px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
