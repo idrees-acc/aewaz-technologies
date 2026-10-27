@@ -1,6 +1,11 @@
 /* Aewaz Technologies — "J" design (A hero + E dashboard + B services + F work).
    Dark is the brand default; [data-theme="light"] overrides tokens only. */
 
+/* Self-hosted latin subsets: same origin, no extra connections before first paint */
+@font-face { font-family: "Archivo"; font-weight: 400 600; font-display: swap; src: url(/src/fonts/archivo.woff2) format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 400; font-display: swap; src: url(/src/fonts/jetbrains-mono.woff2) format("woff2"); }
+@font-face { font-family: "Krona One"; font-weight: 400; font-display: swap; src: url(/src/fonts/krona-one.woff2) format("woff2"); }
+
 :root {
   --bg: #0b0710;
   --surf: #151019;
