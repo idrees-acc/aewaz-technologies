@@ -205,13 +205,14 @@ body::before {
 .chips span { font-family: var(--mono); font-size: 12px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--soft); }
 
 /* work cards */
-.work { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; }
-.case { grid-column: span 2; display: flex; flex-direction: column; border-radius: var(--radius); overflow: hidden; background: var(--surf); border: 1px solid var(--line); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.case:nth-child(4), .case:nth-child(5) { grid-column: span 3; }
-.case:nth-child(2) { transform: translateY(40px); }
+.work { columns: 3; column-gap: 20px; }
+.case { break-inside: avoid; margin-bottom: 20px; display: flex; flex-direction: column; border-radius: var(--radius); overflow: hidden; background: var(--surf); border: 1px solid var(--line); transition: transform 0.3s ease, box-shadow 0.3s ease; }
 .case:hover { box-shadow: 0 30px 60px -30px var(--shadow); }
 .case .shot { aspect-ratio: 1280 / 860; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--surf-2); }
-.case .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.6s ease; }
+/* ponytail: masonry via CSS columns, reads top-to-bottom per column, not row by row */
+.case:nth-child(3n+1) .shot { aspect-ratio: 4 / 3; }
+.case:nth-child(3n) .shot { aspect-ratio: 16 / 9; }
+.case .shot img { width: 100%; height: 100%; object-fit: cover; object-position: left top; transition: transform 0.6s ease; }
 .case:hover .shot img { transform: scale(1.04); }
 .case .cap { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .case .tags { display: flex; gap: 6px; flex-wrap: wrap; }
@@ -299,10 +300,7 @@ a.channel:hover { border-color: var(--acc-2); transform: translateY(-2px); }
   .stats div:nth-child(3) { border-left: 0; padding-left: 0; }
   .stats div:nth-child(n + 3) { border-top: 1px solid var(--line); }
   .sh { grid-template-columns: 1fr; }
-  .work { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .case, .case:nth-child(4), .case:nth-child(5) { grid-column: span 1; }
-  .case:nth-child(2) { transform: none; }
-  .case:nth-child(5) { grid-column: span 2; }
+  .work { columns: 2; }
   .channels { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid > :first-child { grid-column: 1 / -1; }
@@ -325,8 +323,7 @@ a.channel:hover { border-color: var(--acc-2); transform: translateY(-2px); }
   .nav { position: relative; }
   .svc li { grid-template-columns: 1fr; gap: 6px; margin: 0; padding: 22px 0; }
   .svc .n { padding-top: 0; }
-  .work { grid-template-columns: 1fr; }
-  .case:nth-child(5) { grid-column: span 1; }
+  .work { columns: 1; }
   .quotes { columns: 1; }
   .facts { grid-template-columns: 1fr; }
   .sites li { grid-template-columns: 1fr auto; }
