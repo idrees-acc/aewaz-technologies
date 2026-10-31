@@ -33,8 +33,7 @@ function head(s, url) {
       { '@type': 'Service', '@id': `${url}#service`, name: s.h1, serviceType: s.nav, description: s.description, url, provider: { '@id': `${SITE}/#organization` }, areaServed: [{ '@type': 'City', name: 'Mumbai' }, { '@type': 'Country', name: 'India' }] },
       { '@type': 'BreadcrumbList', itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-        { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE}/#services` },
-        { '@type': 'ListItem', position: 3, name: s.nav, item: url },
+        { '@type': 'ListItem', position: 2, name: s.nav, item: url },
       ] },
     ],
   };
@@ -87,6 +86,8 @@ function servicePage(s) {
   return finish(`<!DOCTYPE html>\n<html lang="en">\n${head(s, url)}\n  <body>\n${header}${body}\n${footer}${scripts}  </body>\n</html>\n`);
 }
 
+writeFileSync(resolve(outDir, 'privacy-policy.html'), toHome(includes(read('privacy-policy.html'))).replace(/href="#contact"/g, 'href="/#contact"'));
+
 for (const s of services) {
   mkdirSync(resolve(outDir, 'services', s.slug), { recursive: true });
   writeFileSync(resolve(outDir, 'services', s.slug, 'index.html'), servicePage(s));
@@ -100,7 +101,7 @@ writeFileSync(
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE}${u}</loc><lastmod>${today}</lastmod></url>`).join('\n')}\n</urlset>\n`
 );
 
-for (const f of ['site.css', 'favicon.ico', 'CNAME', 'robots.txt', 'privacy-policy.html', 'llms.txt', '404.html']) {
+for (const f of ['site.css', 'favicon.ico', 'CNAME', 'robots.txt', 'llms.txt', '404.html']) {
   cpSync(resolve(__dirname, f), resolve(outDir, f));
 }
 cpSync(resolve(__dirname, 'src'), resolve(outDir, 'src'), { recursive: true });
