@@ -4,13 +4,13 @@
 
 ## Services
 
-- [Custom websites](https://aewaz.com/#services): responsive, server-side rendered sites in React, Next.js and Angular
-- [SaaS products](https://aewaz.com/#services): architecture, authentication, billing, dashboards, deployment and scaling with Node.js microservices and micro-frontends
-- [E-commerce](https://aewaz.com/#services): online stores with payments and inventory, including Magento and PHP
-- [APIs & integrations](https://aewaz.com/#services): REST and GraphQL APIs, Express.js, MongoDB and third-party integrations
-- [Cloud & DevOps](https://aewaz.com/#services): AWS, Google Cloud, Azure, Kubernetes, Jenkins and CI/CD
-- [SEO & performance](https://aewaz.com/#services): technical SEO, structured data, Core Web Vitals and Lighthouse score optimisation
-- [Security & support](https://aewaz.com/#services): monitoring, bug fixes and remediation of VAPT and red-team findings (OWASP Top 10)
+- [Custom websites](https://aewaz.com/services/web-development/): responsive, server-side rendered sites in React, Next.js and Angular
+- [SaaS products](https://aewaz.com/services/saas-development/): architecture, authentication, billing, dashboards, deployment and scaling with Node.js microservices and micro-frontends
+- [E-commerce](https://aewaz.com/services/ecommerce-development/): online stores with payments and inventory, including Magento and PHP
+- [APIs & integrations](https://aewaz.com/services/api-development/): REST and GraphQL APIs, Express.js, MongoDB and third-party integrations
+- [Cloud & DevOps](https://aewaz.com/services/cloud-devops/): AWS, Google Cloud, Azure, Kubernetes, Jenkins and CI/CD
+- [SEO & performance](https://aewaz.com/services/seo-performance/): technical SEO, structured data, Core Web Vitals and Lighthouse score optimisation
+- [Security & support](https://aewaz.com/services/security-support/): monitoring, bug fixes and remediation of VAPT and red-team findings (OWASP Top 10)
 
 ## Work and proof
 

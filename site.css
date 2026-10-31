@@ -257,7 +257,7 @@ a.channel:hover { border-color: var(--acc-2); transform: translateY(-2px); }
 
 /* footer */
 .footer { border-top: 1px solid var(--line); padding: 56px 0 40px; margin-top: clamp(80px, 11vw, 140px); }
-.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
 .footer p { color: var(--mute); margin-top: 12px; max-width: 26em; }
 .footer h2 { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mute); margin-bottom: 12px; }
 .footer li a { display: inline-flex; min-height: 36px; align-items: center; color: var(--soft); }
@@ -368,4 +368,50 @@ a.channel:hover { border-color: var(--acc-2); transform: translateY(-2px); }
 @media (max-width: 760px) {
   .steps, .faq { grid-template-columns: 1fr; }
   .steps li { border-right: 0; margin-right: 0; padding-right: 0; border-bottom: 1px solid var(--line); }
+}
+
+/* service pages (/services/<slug>/): compact brief + sticky quote card */
+.svcp { max-width: 1080px; margin: 0 auto; padding: 120px var(--gutter) 0; display: grid; grid-template-columns: minmax(0, 1fr) 320px; column-gap: 56px; align-items: start; }
+.svcp-intro { grid-column: 1; }
+.svcp-body { grid-column: 1; }
+.svcp-card { grid-column: 2; grid-row: 1 / span 2; }
+.crumbs { font-size: 14px; color: var(--mute); }
+.crumbs a:hover { color: var(--ink); }
+.svcp h1 { font: 600 clamp(30px, 4vw, 40px)/1.15 var(--body); letter-spacing: -0.02em; margin-top: 14px; }
+.svcp h2 { font: 600 21px/1.3 var(--body); letter-spacing: -0.01em; margin-bottom: 14px; }
+.svcp .lede { color: var(--soft); font-size: 18px; margin-top: 16px; }
+.svcp section { margin-top: 52px; }
+.muted { color: var(--mute); font-size: 15px; }
+.incl li { padding: 10px 0 10px 22px; position: relative; color: var(--soft); border-bottom: 1px solid var(--line); }
+.incl li::before { content: ""; position: absolute; left: 2px; top: 20px; width: 8px; height: 8px; border-radius: 2px; background: var(--acc); }
+.incl b { color: var(--ink); font-weight: 600; }
+.wlist li { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.wlist a { font-weight: 600; min-height: 24px; }
+.wlist a:hover, .contact-lines a:hover { color: var(--acc-2); }
+.wlist span { color: var(--mute); font-size: 15px; }
+.plain-steps { list-style: decimal; padding-left: 22px; color: var(--soft); }
+.plain-steps li { padding: 6px 0; }
+.plain-steps b { color: var(--ink); }
+.chat { margin: 0; display: grid; gap: 18px; padding: 20px; border-radius: 18px; background: var(--surf-2); }
+.chat div { display: grid; gap: 10px; }
+.chat span { display: block; font: 400 11px var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--mute); margin-bottom: 4px; }
+.chat dt { justify-self: end; max-width: 80%; padding: 10px 14px; border-radius: 16px 16px 4px 16px; background: var(--btn-bg); color: #fff; font-weight: 600; font-size: 15px; }
+.chat dt span { color: rgba(255, 255, 255, 0.75); }
+.chat dd { margin: 0; display: flex; gap: 10px; align-items: flex-end; max-width: 86%; }
+.chat dd img { flex: none; border-radius: 8px; background: var(--surf); padding: 3px; }
+.chat dd p { padding: 10px 14px; border-radius: 16px 16px 16px 4px; background: var(--surf); border: 1px solid var(--line); color: var(--soft); font-size: 15px; }
+.svcp-contact { padding: 28px; border-radius: 16px; border: 1px solid var(--line); background: var(--surf); }
+.svcp-contact > p:first-of-type { color: var(--soft); }
+.contact-lines { font-weight: 600; margin: 10px 0 4px; overflow-wrap: anywhere; }
+.svcp-card { position: sticky; top: 100px; margin-top: 60px; padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: var(--surf); display: grid; gap: 10px; }
+.svcp-card .facts { grid-template-columns: 1fr; margin: 0 0 8px; gap: 0; border: 0; border-radius: 0; background: none; }
+.svcp-card .facts div { background: none; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.svcp-card .btn { justify-content: center; }
+.btn-ghost { border: 1px solid var(--line); color: var(--ink); background: transparent; }
+.btn-ghost:hover { border-color: var(--acc-2); }
+.svc h3 a:hover { color: var(--acc-2); }
+@media (max-width: 860px) {
+  .svcp { grid-template-columns: 1fr; gap: 0; padding-top: 100px; }
+  .svcp-intro, .svcp-body, .svcp-card { grid-column: 1; grid-row: auto; }
+  .svcp-card { position: static; margin-top: 28px; }
 }
