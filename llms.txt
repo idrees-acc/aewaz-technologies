@@ -14,7 +14,7 @@
 
 ## Work and proof
 
-- [Selected work](https://aewaz.com/#work): websites for RV Events, Gemman Enterprises, Nafees Biryani (biryani and Dawoodi Bohra cuisine in Malad East, Mumbai), Extreme Blinds and Ameen Steels
+- [Selected work](https://aewaz.com/#work): websites for RV Events, Gemman Enterprises, Nafees Biryani (biryani and Dawoodi Bohra cuisine in Malad East, Mumbai), Extreme Blinds, Ameen Steels and Shree Raj Decorators
 - [Client testimonials](https://aewaz.com/#testimonials)
 - [Lighthouse scorecard](https://aewaz.com/#services): this site's own scores, measured with Lighthouse 12
 

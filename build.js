@@ -20,7 +20,13 @@ const inlined = resolved.replace(
 );
 writeFileSync(resolve(outDir, 'index.html'), inlined);
 
-for (const f of ['site.css', 'favicon.ico', 'CNAME', 'robots.txt', 'sitemap.xml', 'privacy-policy.html', 'llms.txt', '404.html']) {
+const today = new Date().toISOString().slice(0, 10);
+writeFileSync(
+  resolve(outDir, 'sitemap.xml'),
+  readFileSync(resolve(__dirname, 'sitemap.xml'), 'utf-8').replace(/<lastmod>[^<]*<\/lastmod>/g, `<lastmod>${today}</lastmod>`)
+);
+
+for (const f of ['site.css', 'favicon.ico', 'CNAME', 'robots.txt', 'privacy-policy.html', 'llms.txt', '404.html']) {
   cpSync(resolve(__dirname, f), resolve(outDir, f));
 }
 cpSync(resolve(__dirname, 'src'), resolve(outDir, 'src'), { recursive: true });
