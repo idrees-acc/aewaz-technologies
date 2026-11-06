@@ -19,6 +19,9 @@
   --color-accent: oklch(51.8% 0.173 345); --color-accent-hover: oklch(46% 0.165 345); --color-accent-ink: oklch(98.5% 0.006 340); --color-focus: oklch(52% 0.2 345);
   --color-live: oklch(50% 0.12 150);
   --color-shot: oklch(20% 0.03 320 / 0.08);
+  --ink-paper: oklch(17% 0.02 320); --ink-paper-2: oklch(22% 0.022 320); --ink-paper-3: oklch(26% 0.024 320);
+  --ink-ink: oklch(97% 0.006 340); --ink-ink-2: oklch(86% 0.014 335); --ink-muted: oklch(75% 0.018 330);
+  --ink-rule: oklch(97% 0.006 340 / 0.18); --ink-live: oklch(78% 0.13 150); --ink-shot: oklch(97% 0.006 340 / 0.12);
 
   --font-display: "Funnel Display", "Funnel Sans", ui-sans-serif, system-ui, sans-serif; --font-body: "Funnel Sans", ui-sans-serif, system-ui, sans-serif; --font-outlier: var(--font-body);
   --display-weight: 800;
@@ -34,5 +37,14 @@
   --color-accent: oklch(68% 0.145 345); --color-accent-hover: oklch(74% 0.13 345); --color-accent-ink: oklch(16% 0.02 320); --color-focus: oklch(72% 0.16 345);
   --color-live: oklch(72% 0.13 150);
   --color-shot: oklch(94.5% 0.01 330 / 0.1);
+  --ink-paper: oklch(21% 0.03 330); --ink-paper-2: oklch(25% 0.032 330); --ink-paper-3: oklch(29% 0.034 330);
   color-scheme: dark;
+}
+
+/* .ink: a dark surface for the hero, the proof and the close; it re-points the paper and ink tokens so everything inside follows */
+.ink {
+  --color-paper: var(--ink-paper); --color-paper-2: var(--ink-paper-2); --color-paper-3: var(--ink-paper-3);
+  --color-ink: var(--ink-ink); --color-ink-2: var(--ink-ink-2); --color-muted: var(--ink-muted);
+  --color-rule: var(--ink-rule); --color-live: var(--ink-live); --color-shot: var(--ink-shot);
+  background: var(--color-paper); color: var(--color-ink); color-scheme: dark;
 }

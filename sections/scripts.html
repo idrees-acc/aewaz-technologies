@@ -16,6 +16,12 @@
           syncTheme();
         });
         syncTheme();
+        // Follow the system theme live until the visitor picks one with the toggle
+        matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
+          try { if (sessionStorage.getItem("theme")) return; } catch (err) {}
+          root.dataset.theme = e.matches ? "dark" : "light";
+          syncTheme();
+        });
 
         // Mobile menu
         var nav = document.querySelector(".nav");
@@ -70,6 +76,18 @@
           document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
         } else {
           document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+        }
+
+        // Hero figures count up once; the real number is in the HTML for no-JS and reduced motion
+        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          document.querySelectorAll("[data-count]").forEach(function (b) {
+            var n = +b.dataset.count, suffix = b.dataset.suffix || "", t0 = performance.now();
+            (function tick(t) {
+              var p = Math.min((t - t0) / 900, 1);
+              b.textContent = Math.round(n * (1 - Math.pow(1 - p, 3))) + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+            })(t0);
+          });
         }
 
         // Journey tracking for GA4 via GTM. One-page site = one page_view, so the path
