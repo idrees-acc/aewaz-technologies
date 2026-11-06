@@ -23,7 +23,6 @@
       })(window, document, "script", "dataLayer", "GTM-TVMC5L5V");
     </script>
     <!-- End Google Tag Manager -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web &amp; SaaS Development Company in Mumbai | Aewaz Technologies</title>
     <meta
@@ -33,7 +32,8 @@
     <meta name="author" content="Aewaz" />
     <meta name="robots" content="index, follow" />
 
-    <link rel="icon" href="/src/images/logo/aewaz.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/src/images/logo/aewaz.svg" type="image/svg+xml" />
     <meta name="theme-color" content="#0b0710" />
     <script>
       try {
@@ -46,8 +46,8 @@
       }
       document.documentElement.classList.add("js");
     </script>
-    <link rel="preload" href="/src/fonts/krona-one.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/src/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/src/fonts/funnel-display.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/src/fonts/funnel-sans.woff2" as="font" type="font/woff2" crossorigin />
     <link href="/site.css" rel="stylesheet" />
     <!-- Canonical URL -->
     <link rel="canonical" href="https://aewaz.com/" />
@@ -96,10 +96,7 @@
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": [
-              "ProfessionalService",
-              "Organization"
-            ],
+            "@type": "ProfessionalService",
             "@id": "https://aewaz.com/#organization",
             "name": "Aewaz Technologies",
             "alternateName": "Aewaz",
@@ -212,67 +209,31 @@
               "itemListElement": [
                 {
                   "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Custom Web Development",
-                    "description": "Responsive, fast, SEO-optimized websites built with React, Next.js and Node.js."
-                  }
+                  "itemOffered": { "@type": "Service", "@id": "https://aewaz.com/services/web-development#service", "name": "Websites", "url": "https://aewaz.com/services/web-development" }
                 },
                 {
                   "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "SaaS Product Development",
-                    "description": "End-to-end SaaS products: architecture, development, deployment and scaling."
-                  }
+                  "itemOffered": { "@type": "Service", "@id": "https://aewaz.com/services/saas-development#service", "name": "SaaS products", "url": "https://aewaz.com/services/saas-development" }
                 },
                 {
                   "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "E-commerce Solutions",
-                    "description": "Secure, scalable online stores with payment integration and inventory management."
-                  }
+                  "itemOffered": { "@type": "Service", "@id": "https://aewaz.com/services/ecommerce-development#service", "name": "E-commerce", "url": "https://aewaz.com/services/ecommerce-development" }
                 },
                 {
                   "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "API Development & Integration",
-                    "description": "Custom RESTful and GraphQL APIs, third-party integrations and microservices."
-                  }
+                  "itemOffered": { "@type": "Service", "@id": "https://aewaz.com/services/api-development#service", "name": "APIs & integrations", "url": "https://aewaz.com/services/api-development" }
                 },
                 {
                   "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Cloud Solutions",
-                    "description": "Cloud infrastructure, DevOps, CI/CD pipelines and migration on AWS, Google Cloud and Azure."
-                  }
+                  "itemOffered": { "@type": "Service", "@id": "https://aewaz.com/services/cloud-devops#service", "name": "Cloud & DevOps", "url": "https://aewaz.com/services/cloud-devops" }
                 },
                 {
                   "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Product Lifecycle Support",
-                    "description": "Technical support, monitoring, bug fixes and performance optimization."
-                  }
+                  "itemOffered": { "@type": "Service", "@id": "https://aewaz.com/services/seo-performance#service", "name": "SEO & performance", "url": "https://aewaz.com/services/seo-performance" }
                 },
                 {
                   "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "SEO & Performance",
-                    "description": "Technical SEO, Lighthouse score optimisation, server-side rendering, structured data and Core Web Vitals tuning."
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Application Security Hardening",
-                    "description": "Remediation of VAPT and red-team findings, OWASP Top 10 fixes and secure configuration."
-                  }
+                  "itemOffered": { "@type": "Service", "@id": "https://aewaz.com/services/security-support#service", "name": "Security & support", "url": "https://aewaz.com/services/security-support" }
                 }
               ]
             }

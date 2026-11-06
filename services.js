@@ -1,4 +1,4 @@
-// Service pages: build.js renders each entry to /services/<slug>/
+// Service pages: build.js renders each entry to /services/<slug>
 // Keep claims factual: only work, numbers and stack that are true for Aewaz.
 
 const quote = 'Written quote after one call';
@@ -44,12 +44,12 @@ export const services = [
     lede: 'We take a software product from idea to paying users: architecture, sign-in, billing, dashboards, deployment and scaling. Our founder brings 12+ years of engineering on high-traffic, regulated platforms.',
     facts: [['Timeline', 'Set in the quote, by scope'], ['Price', quote], ['Built with', 'Node.js, React, Angular, PostgreSQL'], ['After launch', 'Scaling, monitoring, new features']],
     includes: [
-      ['Architecture that can grow', 'microservices and micro-frontends where they pay off, a simple monolith where they don\'t'],
+      ['Architecture that can grow', 'microservices and micro-frontends where they pay off, a simple monolith where they don’t'],
       ['Accounts and sign-in', 'authentication, roles and team access'],
       ['Billing', 'plans, subscriptions and payment gateway integration'],
       ['Dashboards', 'admin and customer dashboards built around your data'],
       ['Deployment', 'CI/CD pipelines and cloud hosting from the first release'],
-      ['Testing', 'automated tests with Jest so new features don\'t break old ones'],
+      ['Testing', 'automated tests with Jest so new features don’t break old ones'],
     ],
     faqs: [
       ['Can you build an MVP first?', 'Yes. We scope the smallest version that proves the idea, then plan what comes next. Both are in the written quote.'],

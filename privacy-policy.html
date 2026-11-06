@@ -9,8 +9,14 @@
       content="How Aewaz Technologies collects, uses and protects the information you share through aewaz.com."
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://aewaz.com/privacy-policy.html" />
-    <link rel="icon" href="src/images/logo/aewaz.svg" />
+    <link rel="canonical" href="https://aewaz.com/privacy-policy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aewaz.com/privacy-policy" />
+    <meta property="og:title" content="Privacy Policy | Aewaz Technologies" />
+    <meta property="og:description" content="How Aewaz Technologies collects, uses and protects the information you share through aewaz.com." />
+    <meta property="og:image" content="https://aewaz.com/src/images/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/src/images/logo/aewaz.svg" />
     <script>
       try {
         localStorage.removeItem("theme");
@@ -21,29 +27,30 @@
         document.documentElement.dataset.theme = "light";
       }
     </script>
-    <link href="site.css" rel="stylesheet" />
+    <link href="/site.css" rel="stylesheet" />
     <style>
-      .policy { max-width: 760px; margin: 0 auto; padding: 56px 20px 96px; line-height: 1.7; }
-      .policy h1 { font: 400 clamp(32px, 5vw, 44px)/1.1 var(--display); letter-spacing: -0.04em; margin-bottom: 10px; }
-      .policy h2 { font: 400 20px/1.3 var(--display); letter-spacing: -0.03em; margin: 40px 0 12px; }
-      .policy p, .policy li { color: var(--soft); }
-      .policy p, .policy li { margin-bottom: 12px; }
-      .policy ul { list-style: disc; padding-left: 22px; }
+      .policy { max-width: 760px; margin: 0 auto; padding: var(--space-2xl) var(--gutter) var(--space-3xl); line-height: 1.7; }
+      .policy h1 { font-size: var(--text-display-s); line-height: 1.05; margin-bottom: var(--space-sm); }
+      .policy h2 { font-size: var(--text-title); line-height: 1.3; margin: var(--space-xl) 0 var(--space-sm); }
+      .policy p, .policy li { color: var(--color-ink-2); margin-bottom: var(--space-sm); }
+      .policy ul { list-style: disc; padding-left: var(--space-lg); }
       .policy a { text-decoration: underline; text-underline-offset: 3px; }
-      .policy .meta { color: var(--mute); margin-bottom: 32px; }
-      .policy .back { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-bottom: 40px; text-decoration: none; font-weight: 600; }
+      .policy .meta { color: var(--color-muted); margin-bottom: var(--space-xl); }
+      .policy .back { display: inline-flex; align-items: center; gap: var(--space-sm); min-height: 44px; margin-bottom: var(--space-xl); text-decoration: none; font-weight: 600; }
       .policy .back img { width: 40px; height: 40px; }
     </style>
   </head>
   <body>
     <main class="policy" id="home">
+      <header class="policy-head">
       <a href="/" class="back">
-        <img src="src/images/logo/aewaz.svg" alt="" width="40" height="40" />
+        <img src="/src/images/logo/aewaz.svg" alt="" width="40" height="40" />
         Back to Aewaz Technologies
       </a>
 
       <h1>Privacy Policy</h1>
       <p class="meta">Effective 31 October 2026</p>
+      </header>
 
       <p>
         This policy explains what information Aewaz Technologies ("we", "us")

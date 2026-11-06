@@ -7,6 +7,8 @@
     <meta name="robots" content="noindex" />
     <link rel="icon" href="/src/images/logo/aewaz.svg" />
     <script>
+      // Old addresses ended in "/" (/services/web-development/); retry without it once
+      if (location.pathname.length > 1 && location.pathname.endsWith("/")) location.replace(location.pathname.slice(0, -1) + location.search);
       try {
         localStorage.removeItem("theme");
         var t = sessionStorage.getItem("theme");
@@ -18,27 +20,23 @@
     </script>
     <link href="/site.css" rel="stylesheet" />
     <style>
-      .nf { position: relative; min-height: 100dvh; display: grid; place-items: center; overflow: hidden; padding: 48px 0; }
-      .nf-inner { position: relative; max-width: 640px; }
-      .nf-code { font: 400 clamp(96px, 22vw, 200px)/0.85 var(--display); letter-spacing: -0.06em;
-        background: linear-gradient(100deg, var(--grad-1) 5%, var(--grad-2) 50%, var(--grad-3) 90%);
-        -webkit-background-clip: text; background-clip: text; color: transparent; }
-      .nf h1 { font: 400 clamp(26px, 4vw, 40px)/1.1 var(--display); letter-spacing: -0.04em; margin: 20px 0 14px; }
-      .nf p { color: var(--soft); max-width: 32em; }
-      .nf-links { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; margin-top: 32px; }
-      .nf-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 36px; }
-      .nf-list a { font-size: 14px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--soft); min-height: 40px; display: inline-flex; align-items: center; }
-      .nf-list a:hover { border-color: var(--acc-2); color: var(--ink); }
+      .nf { min-height: 100dvh; display: grid; place-items: center; padding-block: var(--space-2xl); }
+      .nf-inner { max-width: 760px; display: grid; gap: var(--space-lg); }
+      .nf-code { font: 400 clamp(6rem, 20vw, 12rem)/0.85 var(--font-display); letter-spacing: -0.06em; color: var(--color-ink); }
+      .nf h1 { text-wrap: balance; font-size: var(--text-section); line-height: 1.1; }
+      .nf p { color: var(--color-ink-2); max-width: 52ch; }
+      .nf-links { display: flex; flex-wrap: wrap; gap: var(--space-sm) var(--space-lg); align-items: center; }
+      .nf-list { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+      .nf-list a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--space-md); border: 1px solid var(--color-rule); border-radius: var(--radius-pill); font-size: var(--text-sm); color: var(--color-ink-2); transition: border-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out); }
+      .nf-list a:hover { border-color: var(--color-muted); color: var(--color-ink); }
     </style>
   </head>
   <body>
     <main class="nf">
-      <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-      <div class="wrap nf-inner">
-        <p class="mono">Error 404</p>
+      <div class="container nf-inner">
         <div class="nf-code" aria-hidden="true">404</div>
-        <h1>This page didn't make it to production.</h1>
-        <p>The link may be old or mistyped. Everything we do is on the homepage, and we're one message away if you were looking for something specific.</p>
+        <h1>This page didn&rsquo;t make it to production.</h1>
+        <p>The link may be old or mistyped. Everything we do is on the homepage, and we&rsquo;re one message away if you were looking for something specific.</p>
         <div class="nf-links">
           <a class="btn btn-accent" href="/">Go to the homepage</a>
           <a class="link" href="/#contact">Talk to us</a>
@@ -47,7 +45,7 @@
           <a href="/#services">Services</a>
           <a href="/#work">Work</a>
           <a href="/#about">About</a>
-          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/privacy-policy">Privacy Policy</a>
         </nav>
       </div>
     </main>
